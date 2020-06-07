@@ -1,7 +1,7 @@
 <?php
 /**
  * https://leetcode.com/problems/word-search/
- * 
+ *
  * 22:23 - 23:10
  */
 
@@ -33,7 +33,7 @@ class Solution {
 
         $board[$i][$j] = ' ';
         $word = substr($word, 1);
-        
+
         return $this->dfs($i + 1, $j, $word, $board)
             || $this->dfs($i, $j + 1, $word, $board)
             || $this->dfs($i - 1, $j, $word, $board)
@@ -43,10 +43,6 @@ class Solution {
 
 
 /* Test cases
-
-[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
-"ABCCED"
-
 [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
 "A"
 [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
